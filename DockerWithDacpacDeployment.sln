@@ -5,8 +5,9 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0386F11C-CD49-4A78-BBEE-04275DFDA86D}"
 	ProjectSection(SolutionItems) = preProject
+		deploydacpac.sh = deploydacpac.sh
 		Dockerfile = Dockerfile
-		restoredb.sh = restoredb.sh
+		Startup.ps1 = Startup.ps1
 	EndProjectSection
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CustomerDB", "CustomerDB\CustomerDB.sqlproj", "{1699D06A-1D09-48F5-9948-02233D3CFE34}"
