@@ -12,7 +12,8 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsof
     libunwind8 \
     libicu55 \
     unzip \
-    dotnet-runtime-2.2
+    dotnet-runtime-2.2 \
+    libunwind-dev
 
 # Link provided on this page:
 # https://docs.microsoft.com/en-us/sql/tools/sqlpackage-download?view=sql-server-2017
