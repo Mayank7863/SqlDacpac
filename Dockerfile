@@ -16,12 +16,8 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsof
     libunwind8 \
     libicu55 \
     unzip \
-    dotnet-runtime-2.1
+    dotnet-runtime-2.2
     
 ADD https://go.microsoft.com/fwlink/?linkid=873926 /opt/mssql-tools/bin/sqlpackage/sqlpackage.zip
-
-
-COPY ./CustomerDB/bin/Debug/*.dacpac /opt/mssql-tools/bin/sqlpackage/
-COPY ./*.sh /opt/mssql-tools/bin/sqlpackage/
 
 RUN unzip /opt/mssql-tools/bin/sqlpackage/sqlpackage.zip -d /opt/mssql-tools/bin/sqlpackage/
