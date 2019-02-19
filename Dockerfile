@@ -1,10 +1,6 @@
-﻿# A basic SQL server
 FROM mcr.microsoft.com/mssql/server:latest
 
-ENV ACCEPT_EULA="Y" \
-    SA_PASSWORD="docker_Sql_Rocks_123" \
-    MSSQL_PID="Developer" \
-    PATH="/opt/mssql-tools/bin:/opt/mssql-tools/bin/sqlpackage/:${PATH}"
+ENV PATH="/opt/mssql-tools/bin:/opt/mssql-tools/bin/sqlpackage/:${PATH}"
 
 EXPOSE 1433
 
@@ -17,7 +13,9 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsof
     libicu55 \
     unzip \
     dotnet-runtime-2.2
-    
-ADD https://go.microsoft.com/fwlink/?linkid=873926 /opt/mssql-tools/bin/sqlpackage/sqlpackage.zip
+
+# Link provided on this page:
+# https://docs.microsoft.com/en-us/sql/tools/sqlpackage-download?view=sql-server-2017
+ADD https://go.microsoft.com/fwlink/?linkid=2069122 /opt/mssql-tools/bin/sqlpackage/sqlpackage.zip
 
 RUN unzip /opt/mssql-tools/bin/sqlpackage/sqlpackage.zip -d /opt/mssql-tools/bin/sqlpackage/
